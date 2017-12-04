@@ -25,14 +25,6 @@
         tools:layout_editor_absoluteY="366dp" />
 
     <ImageView
-        android:id="@+id/imageViewExplosion"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        app:srcCompat="@drawable/misc39b"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="430dp" />
-
-    <ImageView
         android:id="@+id/imageViewBullet"
         android:layout_width="48dp"
         android:layout_height="48dp"

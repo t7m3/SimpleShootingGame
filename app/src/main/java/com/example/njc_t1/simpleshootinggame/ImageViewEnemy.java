@@ -12,6 +12,7 @@ public class ImageViewEnemy {
 
     //このクラスのグローバル変数の宣言
     int dir = +1;
+    int bang = 0;
     ImageView imageViewEnemy;
 
     //画面の幅、高さを取得する

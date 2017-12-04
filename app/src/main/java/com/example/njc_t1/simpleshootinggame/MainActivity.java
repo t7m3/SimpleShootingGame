@@ -108,8 +108,19 @@ public class MainActivity extends AppCompatActivity {
 
         //タイマイベントの処理
         public void onTick(long millisUntilFinished){
-            //敵が左右に移動する。
-            imageViewEnemy.Move(5);
+
+            if(imageViewEnemy.bang == 0){
+                //敵が左右に移動する。
+                imageViewEnemy.Move(5);
+            }
+            else{
+                if(imageViewEnemy.bang++ >= 100){
+                    imageViewEnemy.bang = 0;
+                    imageViewEnemy.setImageResource(R.drawable.rocket);
+                }
+
+            }
+
 
             //弾が上に移動する。
             if(imageViewBullet.shoot == true){
@@ -119,7 +130,10 @@ public class MainActivity extends AppCompatActivity {
             //当たり判定
             if(imageViewEnemy.getY() <= imageViewBullet.getY() && imageViewBullet.getY() <= imageViewEnemy.getY()+imageViewEnemy.getHeight()){
                 if(imageViewEnemy.getX() <= imageViewBullet.getX()+imageViewBullet.getWidth()/2 && imageViewBullet.getX()+imageViewBullet.getWidth()/2 <= imageViewEnemy.getX()+imageViewEnemy.getWidth()){
-                    imageViewEnemy.setImageResource(R.drawable.misc39b);
+                    imageViewEnemy.setImageResource(R.drawable.misc39b); //爆発の画像にする
+                    imageViewEnemy.bang = 1;
+                    imageViewBullet.shoot = false;
+                    imageViewBullet.reset();
                 }
             }
        }
