@@ -80,8 +80,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case MotionEvent.ACTION_UP:
                 textView.append("　ACTION_UP");
-                imageViewBullet.setXY(x, y);
-                imageViewBullet.shoot = true;
+                if(imageViewBullet.shoot == false) {
+                    imageViewBullet.setXY(x, y);
+                    imageViewBullet.shoot = true;
+                }
                 break;
             case MotionEvent.ACTION_MOVE:
                 textView.append("　ACTION_MOVE");
