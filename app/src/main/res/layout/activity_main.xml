@@ -14,30 +14,30 @@
         android:layout_marginTop="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ROCKET" />
+        app:srcCompat="@drawable/rocket" />
 
     <ImageView
         android:id="@+id/imageViewPlayer"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        app:srcCompat="@drawable/ARW03UP"
-        tools:layout_editor_absoluteY="366dp"
-        tools:layout_editor_absoluteX="16dp" />
-
-    <ImageView
-        android:id="@+id/imageViewBullet"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginLeft="168dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:srcCompat="@drawable/ARW02UP"
-        tools:layout_editor_absoluteY="206dp" />
+        app:srcCompat="@drawable/arw03up"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="366dp" />
 
     <ImageView
         android:id="@+id/imageViewExplosion"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        app:srcCompat="@drawable/MISC39B"
+        app:srcCompat="@drawable/misc39b"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="430dp" />
+
+    <ImageView
+        android:id="@+id/imageViewBullet"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:srcCompat="@drawable/arw02up"
+        tools:layout_editor_absoluteX="175dp"
+        tools:layout_editor_absoluteY="199dp" />
+
 </android.support.constraint.ConstraintLayout>
