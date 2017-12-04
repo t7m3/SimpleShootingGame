@@ -36,6 +36,7 @@ public class ImageViewBullet {
             shoot = false;
             reset();
         }
+
     }
 
     //ｘ座標、ｙ座標を設定する
@@ -50,6 +51,22 @@ public class ImageViewBullet {
         int x = 0;
         int y = screenHeight * 75/100;
         setXY(x, y);
+    }
+
+    public  float getX(){
+        return  imageViewBullet.getX();
+    }
+
+    public  float getY(){
+        return imageViewBullet.getY();
+    }
+
+    public  float getWidth(){
+        return imageViewBullet.getWidth();
+    }
+
+    public  float getHeight() {
+        return imageViewBullet.getHeight();
     }
 }
 

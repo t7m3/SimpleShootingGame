@@ -116,7 +116,13 @@ public class MainActivity extends AppCompatActivity {
                 imageViewBullet.Move(10);
             }
 
-        }
+            //当たり判定
+            if(imageViewEnemy.getY() <= imageViewBullet.getY() && imageViewBullet.getY() <= imageViewEnemy.getY()+imageViewEnemy.getHeight()){
+                if(imageViewEnemy.getX() <= imageViewBullet.getX()+imageViewBullet.getWidth()/2 && imageViewBullet.getX()+imageViewBullet.getWidth()/2 <= imageViewEnemy.getX()+imageViewEnemy.getWidth()){
+                    imageViewEnemy.setImageResource(R.drawable.misc39b);
+                }
+            }
+       }
 
         //タイマ終了の処理
         public  void onFinish(){

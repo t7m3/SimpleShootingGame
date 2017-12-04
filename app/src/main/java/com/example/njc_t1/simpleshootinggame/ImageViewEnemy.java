@@ -36,7 +36,25 @@ public class ImageViewEnemy {
         if(x < 0 || x > screenWidth-imageViewEnemy.getWidth()){
             dir = -dir; //移動の左右の向きを反転する
         }
+    }
 
+    public  float getX(){
+        return imageViewEnemy.getX();
+    }
 
+    public  float getY(){
+        return imageViewEnemy.getY();
+    }
+
+    public  float getWidth(){
+        return imageViewEnemy.getWidth();
+    }
+
+    public  float getHeight(){
+        return imageViewEnemy.getHeight();
+    }
+
+    public void setImageResource(int resid){
+        imageViewEnemy.setImageResource(resid);
     }
 }
