@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.njc_t1.simpleshootinggame.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageViewEnemy"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ROCKET" />
+
+    <ImageView
+        android:id="@+id/imageViewPlayer"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:srcCompat="@drawable/ARW03UP"
+        tools:layout_editor_absoluteY="366dp"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <ImageView
+        android:id="@+id/imageViewBullet"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="168dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:srcCompat="@drawable/ARW02UP"
+        tools:layout_editor_absoluteY="206dp" />
+
+    <ImageView
+        android:id="@+id/imageViewExplosion"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:srcCompat="@drawable/MISC39B"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="430dp" />
+</android.support.constraint.ConstraintLayout>
