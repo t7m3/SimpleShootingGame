@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     //グローバル変数の宣言(インスタンス変数、メンバ変数)
     ImageViewEnemy imageViewEnemy;
     ImageViewPlayer imageViewPlayer;
+    ImageViewBullet imageViewBullet;
     TextView textView;
 
     //画面の幅、高さを取得する
@@ -50,10 +51,18 @@ public class MainActivity extends AppCompatActivity {
         //imageViewPlayerの参照値を取得する。findViewById()メソッドで
         ImageView R_imageViewPlayer = (ImageView)findViewById(R.id.imageViewPlayer);
 
-        //プレイヤーインスタンスの生成
+        //プレイヤーのインスタンスの生成
         x = 0;
         y = screenHeight * 60/100;
         imageViewPlayer = new ImageViewPlayer(R_imageViewPlayer, x, y);
+
+        //imageViewBulletの参照値を取得する。findViewById()メソッドで
+        ImageView R_imageViewBullet = (ImageView)findViewById(R.id.imageViewBullet);
+
+        //弾のインスタンスの生成
+        x = 0;
+        y = screenHeight * 75/100;
+        imageViewBullet = new ImageViewBullet(R_imageViewBullet, x, y);
     }
 
     @Override
@@ -71,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case MotionEvent.ACTION_UP:
                 textView.append("　ACTION_UP");
+                imageViewBullet.setXY(x, y);
+                imageViewBullet.shoot = true;
                 break;
             case MotionEvent.ACTION_MOVE:
                 textView.append("　ACTION_MOVE");
@@ -97,6 +108,11 @@ public class MainActivity extends AppCompatActivity {
         public void onTick(long millisUntilFinished){
             //敵が左右に移動する。
             imageViewEnemy.Move(5);
+
+            //弾が上に移動する。
+            if(imageViewBullet.shoot == true){
+                imageViewBullet.Move(10);
+            }
 
         }
 
