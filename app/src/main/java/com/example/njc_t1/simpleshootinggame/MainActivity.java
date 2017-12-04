@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         //プレイヤーインスタンスの生成
         x = 0;
-        y = screenHeight * 0/100;
+        y = screenHeight * 60/100;
         imageViewPlayer = new ImageViewPlayer(R_imageViewPlayer, x, y);
     }
 
