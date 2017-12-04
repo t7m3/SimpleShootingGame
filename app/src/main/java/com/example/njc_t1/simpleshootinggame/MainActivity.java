@@ -6,6 +6,7 @@ import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         textView = (TextView)findViewById(R.id.textView);
 
         //タイマーのインスタンスの生成
-        GameTimer gameTimer = new GameTimer(1*60*1000, 50);
+        GameTimer gameTimer = new GameTimer(10*60*1000, 50);
 
         //タイマをスタートする
         gameTimer.start();
@@ -63,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         x = 0;
         y = screenHeight * 75/100;
         imageViewBullet = new ImageViewBullet(R_imageViewBullet, x, y);
+        imageViewBullet.setVisibility(View.INVISIBLE);
     }
 
     @Override
@@ -82,7 +84,10 @@ public class MainActivity extends AppCompatActivity {
             case MotionEvent.ACTION_UP:
                 textView.append("　ACTION_UP");
                 if(imageViewBullet.shoot == false ) {
+                    x = (int) imageViewPlayer.getX();
+                    y = (int) imageViewPlayer.getY();
                     imageViewBullet.setXY(x, y);
+                    imageViewBullet.setVisibility(View.VISIBLE);
                     imageViewBullet.shoot = true;
                 }
                 break;

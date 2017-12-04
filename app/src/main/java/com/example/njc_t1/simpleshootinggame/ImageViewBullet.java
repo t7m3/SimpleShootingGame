@@ -2,6 +2,7 @@ package com.example.njc_t1.simpleshootinggame;
 
 import android.content.res.Resources;
 import android.util.DisplayMetrics;
+import android.view.View;
 import android.widget.ImageView;
 
 /**
@@ -48,6 +49,7 @@ public class ImageViewBullet {
     //弾をリセットする
     public  void  reset(){
 
+        imageViewBullet.setVisibility(View.INVISIBLE);
         int x = 0;
         int y = screenHeight * 75/100;
         setXY(x, y);
@@ -67,6 +69,10 @@ public class ImageViewBullet {
 
     public  float getHeight() {
         return imageViewBullet.getHeight();
+    }
+
+    public void  setVisibility(int visibility){
+        imageViewBullet.setVisibility(visibility);
     }
 }
 

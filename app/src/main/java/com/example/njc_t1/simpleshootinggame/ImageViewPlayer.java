@@ -22,4 +22,13 @@ public class ImageViewPlayer {
     public void setX(int x){
         imageViewPlayer.setX(x);
     }
+
+    public float getX(){
+        return  imageViewPlayer.getX();
+    }
+
+    public float getY(){
+        return imageViewPlayer.getY();
+    }
 }
+
