@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.njc_t1.ImageViewPlayer;
+
 //MainActivityクラスの定義・・・AppCompatActivityクラスを継承している
 public class MainActivity extends AppCompatActivity {
 
@@ -55,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         //プレイヤーのインスタンスの生成
         x = 0;
         y = screenHeight * 60/100;
-        imageViewPlayer = new ImageViewPlayer(R_imageViewPlayer, x, y);
+        imageViewPlayer = new ImageViewPlayer( R_imageViewPlayer, x, y);
 
         //imageViewBulletの参照値を取得する。findViewById()メソッドで
         ImageView R_imageViewBullet = (ImageView)findViewById(R.id.imageViewBullet);
@@ -86,7 +88,8 @@ public class MainActivity extends AppCompatActivity {
                 if(imageViewBullet.shoot == false ) {
                     x = (int) imageViewPlayer.getX();
                     y = (int) imageViewPlayer.getY();
-                    imageViewBullet.setXY(x, y);
+                    imageViewBullet.setX(x);
+                    imageViewBullet.setY(y);
                     imageViewBullet.setVisibility(View.VISIBLE);
                     imageViewBullet.shoot = true;
                 }
