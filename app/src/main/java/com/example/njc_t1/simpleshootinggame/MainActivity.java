@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 textView.append("　ACTION_DOWN");
-                imageViewPlayer.setX(x);
+                //imageViewPlayer.setX(x);
                 break;
             case MotionEvent.ACTION_UP:
                 textView.append("　ACTION_UP");
