@@ -1,4 +1,4 @@
-package com.example.njc_t1;
+package com.example.njc_t1.simpleshootinggame;
 
 import android.widget.ImageView;
 

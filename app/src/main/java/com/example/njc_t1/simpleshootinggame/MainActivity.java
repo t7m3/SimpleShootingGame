@@ -10,8 +10,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.njc_t1.ImageViewPlayer;
-
 //MainActivityクラスの定義・・・AppCompatActivityクラスを継承している
 public class MainActivity extends AppCompatActivity {
 
