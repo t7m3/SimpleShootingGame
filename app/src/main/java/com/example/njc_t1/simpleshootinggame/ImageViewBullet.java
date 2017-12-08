@@ -14,15 +14,16 @@ public class ImageViewBullet extends WrapImageView {
 
     //このクラスのコンストラクタ
     public ImageViewBullet(ImageView R_imageViewBullet, int x, int y){
+        //親クラスのコンストラクタを呼び出す
         super(R_imageViewBullet, x, y);
     }
 
-    //左または右に移動する。valueは移動量。
+    //上に移動する。valueは移動量。
     public  void  Move(int value){
 
         float y = getY(); //y座標の取得
         y = y - value;
-        setY((int)y); //x座標の更新
+        setY((int)y); //y座標の更新
 
         if(y < 0 ){
             shoot = false;

@@ -14,6 +14,7 @@ public class ImageViewEnemy extends WrapImageView {
 
     //このクラスのコンストラクタ
     public ImageViewEnemy(ImageView R_imageViewEnemy, int x, int y){
+        //親クラスのコンストラクタを呼び出す
         super(R_imageViewEnemy, x, y);
     }
 

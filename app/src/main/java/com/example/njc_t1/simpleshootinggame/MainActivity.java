@@ -110,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
         //GameTimerクラスのコンストラクタの定義
         public GameTimer(long millisInFuture, long countDownInterval){
+            //親クラスのコンストラクタを呼び出す
             super(millisInFuture, countDownInterval );
         }
 
