@@ -129,27 +129,34 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
-
             //弾が上に移動する。
             if(imageViewBullet.shoot == true){
                 imageViewBullet.Move(10);
             }
 
-            //当たり判定
-            if(imageViewEnemy.getY() <= imageViewBullet.getY() && imageViewBullet.getY() <= imageViewEnemy.getY()+imageViewEnemy.getHeight()){
-                if(imageViewEnemy.getX() <= imageViewBullet.getX()+imageViewBullet.getWidth()/2 && imageViewBullet.getX()+imageViewBullet.getWidth()/2 <= imageViewEnemy.getX()+imageViewEnemy.getWidth()){
-                    imageViewEnemy.setImageResource(R.drawable.misc39b); //爆発の画像にする
-                    imageViewEnemy.bang = 1;
-                    imageViewBullet.shoot = false;
-                    imageViewBullet.reset();
-                }
+            //当たり判定（下にある当たり判定のメソッドを使用）
+            if(hit(imageViewEnemy, imageViewBullet) == true){
+                imageViewEnemy.setImageResource(R.drawable.misc39b); //爆発の画像にする
+                imageViewEnemy.bang = 1;
+                imageViewBullet.shoot = false;
+                imageViewBullet.reset();
             }
-       }
+        }
 
         //タイマ終了の処理
         public  void onFinish(){
 
         }
+    }
+
+    //当たり判定のメソッド　当たったら、trueを返す
+    public boolean hit(ImageViewEnemy enemy, ImageViewBullet bullet){
+        if(enemy.getY() <= bullet.getY() && bullet.getY() <= enemy.getY()+enemy.getHeight()){
+            if(enemy.getX() <= bullet.getX()+bullet.getWidth()/2 && bullet.getX()+bullet.getWidth()/2 <= enemy.getX()+enemy.getWidth()){
+              return true;
+            }
+        }
+        return false;
     }
 
 }
